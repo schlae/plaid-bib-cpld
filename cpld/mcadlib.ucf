@@ -1,0 +1,64 @@
+#
+# Plaid Bib CPLD Version - Constraints (pin mapping)
+# Copyright (c) 2020 Eric Schlaepfer
+# This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+# International License. To view a copy of this license, visit
+# http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative
+# Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+
+# Pin map
+NET "adl_l" loc="P22";
+NET "adl_l" BUFG=CLK;
+NET "cmd" loc="P23";
+NET "cmd" BUFG=CLK;
+NET "ext_clock" loc="P27";
+NET "ext_clock" BUFG=CLK;
+
+NET "cd_setup_l" loc="P55";
+NET "cd_sfdbk" loc="P56";
+NET "cd_ds16" loc="P58";
+NET "cd_chrdy_l" loc="P59";
+
+NET "m_io" loc="P63";
+NET "s0_w_l" loc="P64";
+NET "s1_r_l" loc="P65";
+NET "a(0)" loc="P28";
+NET "a(1)" loc="P29";
+NET "a(2)" loc="P30";
+NET "a(3)" loc="P32";
+NET "a(4)" loc="P33";
+NET "a(5)" loc="P35";
+NET "a(6)" loc="P36";
+NET "a(7)" loc="P37";
+NET "a(8)" loc="P39";
+NET "a(9)" loc="P40";
+NET "a(10)" loc="P41";
+NET "a(11)" loc="P42";
+NET "a(12)" loc="P49";
+NET "a(13)" loc="P50";
+NET "a(14)" loc="P52";
+NET "a(15)" loc="P53";
+
+NET "d(0)" loc="P13";
+NET "d(1)" loc="P14";
+NET "d(2)" loc="P15";
+NET "d(3)" loc="P16";
+NET "d(4)" loc="P17";
+NET "d(5)" loc="P18";
+NET "d(6)" loc="P20";
+NET "d(7)" loc="P25";
+
+NET "ior_l" loc="P91";
+NET "iow_l" loc="P92";
+NET "ym_cs_l" loc="P93";
+NET "ym_a0" loc="P94";
+NET "ym_ic_l" loc="P95";
+NET "ym_clock" loc="P96";
+
+NET "cden" loc="P66";
+NET "bufen_l" loc="P67";
+NET "bufdir" loc="P68";
+
+NET "chreset" loc="P99";
+
