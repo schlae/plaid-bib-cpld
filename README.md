@@ -132,10 +132,11 @@ the bracket is probably too thin to print well.
 The Plaid Bib has been tested on some models of PS/2. More to be added as
 people provide test reports.
 
-| Computer           | Compatible ? |
-| ------------------ | ------------ |
-| IBM PS/2 Model 50Z | Yes          |
-| IBM PS/2 Model 95  | Yes?         |
+| Computer           | Model    | CPU          | Compatible ? |
+| ------------------ | -------- | ------------ | ------------ |
+| IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Yes          |
+| IBM PS/2 Model 85  | 9585     | 486SX-33     | Yes          |
+| IBM PS/2 Model 95  | 8595     | 486DX2-66    | Yes?         |
 
 *Note: The Model 95 recognizes the card but the computer was having existing
 issues booting up and I was unable to fully test the card.*
