@@ -135,9 +135,13 @@ people provide test reports.
 | Computer           | Model    | CPU          | Compatible ? |
 | ------------------ | -------- | ------------ | ------------ |
 | IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Yes          |
-| IBM PS/2 Model 80  | 8580-071 | 80386DX-16   | Yes          |
+| IBM PS/2 Model 80  | 8580-071 | 80386DX-16   | Partial\*    |
 | IBM PS/2 Model 85  | 9585     | 486SX-33     | Yes          |
 | IBM PS/2 Model 95  | 8595     | 486DX2-50    | Yes          |
+
+\*The Model 80 has compatibility problems with some software, sometimes
+preventing Ad Lib detection from working, and sometimes causing audio glitches.
+Troubleshooting work is ongoing.
 
 ## Installation
 You will need the ADF (adapter description file) in order to set up the Plaid
