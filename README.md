@@ -135,8 +135,8 @@ people provide test reports.
 | Computer           | Model    | CPU          | Adapters | Compatible ? |
 | ------------------ | -------- | ------------ | | ------------ |
 | IBM PS/2 Model 50  | 8550-021 | 80286-10     | | Partial¹
-| IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Hard disk (ID:DF9F),<br/>IBM SCSI 71G3575 | Yes |
-| IBM PS/2 Model 55SX<br/>with Reply Turboboard| 8555 | 486SLC2-50 |  | Yes |
+| IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Hard disk (ID:DF9F), IBM SCSI 71G3575 | Yes |
+| IBM PS/2 Model 55SX with Reply Turboboard| 8555 | 486SLC2-50 |  | Yes |
 | IBM PS/2 Model 70  | 8570-E61 | 386-16   | Adaptec AHA-1640 | Yes |
 | IBM PS/2 Model 70  | 8570-121 | 386-20   | | Yes |
 | IBM PS/2 Model 80  | 8580-071 | 386DX-16   | | Partial² |
