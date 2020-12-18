@@ -133,7 +133,7 @@ The Plaid Bib has been tested on some models of PS/2. More to be added as
 people provide test reports.
 
 | Computer           | Model    | CPU          | Adapters | Compatible ? |
-| ------------------ | -------- | ------------ | | ------------ |
+| ------------------ | -------- | ------------ | -------- | ------------ |
 | IBM PS/2 Model 50  | 8550-021 | 80286-10     | | Partial¹
 | IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Hard disk (ID:DF9F), IBM SCSI 71G3575 | Yes |
 | IBM PS/2 Model 55SX with Reply Turboboard| 8555 | 486SLC2-50 |  | Yes |
