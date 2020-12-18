@@ -132,15 +132,20 @@ the bracket is probably too thin to print well.
 The Plaid Bib has been tested on some models of PS/2. More to be added as
 people provide test reports.
 
-| Computer           | Model    | CPU          | Compatible ? |
-| ------------------ | -------- | ------------ | ------------ |
-| IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Yes          |
-| IBM PS/2 Model 55SX with Reply Turboboard| 8555 | 486SLC2-50 | Yes |
-| IBM PS/2 Model 80  | 8580-071 | 80386DX-16   | Partial\*    |
-| IBM PS/2 Model 85  | 9585     | 486SX-33     | Yes          |
-| IBM PS/2 Model 95  | 8595     | 486DX2-50    | Yes          |
+| Computer           | Model    | CPU          | Adapters | Compatible ? |
+| ------------------ | -------- | ------------ | | ------------ |
+| IBM PS/2 Model 50  | 8550-021 | 80286-10     | | Partial¹
+| IBM PS/2 Model 50Z | 8550-031 | 80286-10     | Hard disk (ID:DF9F),<br/>IBM SCSI 71G3575 | Yes |
+| IBM PS/2 Model 55SX<br/>with Reply Turboboard| 8555 | 486SLC2-50 |  | Yes |
+| IBM PS/2 Model 70  | 8570-E61 | 386-16   | Adaptec AHA-1640 | Yes |
+| IBM PS/2 Model 70  | 8570-121 | 386-20   | | Yes |
+| IBM PS/2 Model 80  | 8580-071 | 386DX-16   | | Partial² |
+| IBM PS/2 Model 85  | 9585     | 486SX-33     | | Yes |
+| IBM PS/2 Model 95  | 8595     | 486DX2-50    | | Yes |
 
-\*PS/2 Model 80 machines with the type 1 planar (16MHz 386) and an installed
+¹One user reported compatibility problems with the hard drive (ID:DF9F)
+
+²PS/2 Model 80 machines with the type 1 planar (16MHz 386) and an installed
 MCA memory card are not fully compatible; the Plaid Bib behaves erratically in
 these machines. The root cause is not fully understood.
 
