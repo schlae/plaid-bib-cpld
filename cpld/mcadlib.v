@@ -60,7 +60,7 @@ assign cd_ds16 = 1'b0;
 // BBB comes from POS 103 [5:3]
 // POS102 written to be 0000000X
 // POS103 needs to be 11000000
-assign pos_address = {7'b0000001, pos_reg1[7:3], 3'b100};
+assign pos_address = 15'b000000111000100;
 
 // Card selected feedback
 // Inverted externally. Not qualified by any clock.
@@ -70,7 +70,7 @@ assign cd_sfdbk = (a[15:1] == pos_address) & ~m_io & cd_setup_l & cden;
 always @ (negedge adl_l or posedge chreset)
 begin
     if (chreset) begin
-        addr_latched <= 3'b00;
+        addr_latched <= 3'b000;
         cd_sel <= 1'b0;
         m_io_latched <= 1'b0;
         cd_setup <= 1'b0;
@@ -92,7 +92,7 @@ end
 // set by this state and cleared on the falling edge of cmd.
 // I'm not sure this is necessary for I/O cycles, which always seem to be about
 // 300ns.
-assign cd_chrdy_l = cd_sfdbk & ~s1_r_l & cmd;
+assign cd_chrdy_l = (cd_sfdbk & (~s1_r_l | ~s0_w_l) & cmd);
 
 // Clock divider takes 14.3MHz and divides it to 3.57MHz.
 always @ (posedge ext_clock or posedge chreset)
