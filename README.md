@@ -16,6 +16,11 @@ from brokers in China such as UTSource.
 
 [Fab Files](https://github.com/schlae/plaid-bib-cpld/blob/master/fab/PlaidBibCPLD-fab.zip)
 
+The logic family used for U1 is critical. Do not substitute LS, HC, HCT, or
+similarly slow logic families. Use ALS, ACT, AHCT, or even F.
+
+It's a good idea to use sockets for all the DIP chips just in case you need
+to swap parts out.
 
 ## CPLD Notes
 The Plaid Bib uses a CPLD (Complex Programmable Logic Device) to interface
@@ -139,15 +144,15 @@ people provide test reports.
 | IBM PS/2 Model 55SX with Reply Turboboard| 8555 | 486SLC2-50 |  | Yes |
 | IBM PS/2 Model 70  | 8570-E61 | 386-16   | Adaptec AHA-1640 | Yes |
 | IBM PS/2 Model 70  | 8570-121 | 386-20   | | Yes |
-| IBM PS/2 Model 80  | 8580-071 | 386DX-16   | | Partial² |
+| IBM PS/2 Model 80  | 8580-071 | 386DX-16   | | Yes² |
 | IBM PS/2 Model 85  | 9585     | 486SX-33     | | Yes |
 | IBM PS/2 Model 95  | 8595     | 486DX2-50    | | Yes |
 
 ¹One user reported compatibility problems with the hard drive (ID:DF9F)
 
 ²PS/2 Model 80 machines with the type 1 planar (16MHz 386) and an installed
-MCA memory card are not fully compatible; the Plaid Bib behaves erratically in
-these machines. The root cause is not fully understood.
+MCA memory card may have compatibility issues; the Plaid Bib behaves
+erratically in one user's machine, but works fine in another one.
 
 ## Installation
 You will need the ADF (adapter description file) in order to set up the Plaid
@@ -163,6 +168,33 @@ the ADF file. After the setup utility configures the card, it will prompt
 you to reboot the machine.
 
 Once that's finished, try out the Plaid Bib with your favorite game!
+
+## Troubleshooting
+Keep in mind that Micro Channel systems can be difficult to troubleshoot due to
+the large number of possible configurations and the varied implementations of
+the bus. Not all games will even work on some PS/2 systems, even without a
+sound card!
+
+Here are a few things to try out first before you really start digging in:
+- Is the CPLD soldered in correctly, with no solder bridges? If you have a
+microscope, check every solder joint! Did you program the CPLD?
+- Are there any bad or fake chips? Some users have reported issues with fake
+74ALS245 buffer chips, fake YM3812s, and fake Y3014B chips
+- Try running [SBDIAG](https://github.com/schlae/snark-barker/tree/master/sbdiag)
+
+### Symptom-by-Symptom
+
+**Computer will not boot at all, Computer boots but does not detect the card**
+
+Suspect the CPLD. Check for bad solder joints. Is pin 1 oriented correctly?
+Compare it with the photo.
+
+Did you use something other than a 74ALS245, 'ACT245, 'AHCT245, or 'F245?
+Slower logic families can "crash the bus" and prevent the system from booting.
+
+**The card causes random errors with the hard disk, or with other cards**
+
+Did you buy a legitimate 74ALS245, or is it a fake? Try swapping it out.
 
 ## License
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
